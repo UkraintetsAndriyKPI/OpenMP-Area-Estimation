@@ -9,9 +9,9 @@ The task is to estimate the area of a shape formed after cutting the following f
 - An equilateral triangle with side length `c`, centered at point `(x2, y2)`, rotated by an angle `ф`.
 
 The program estimates the remaining area using the Monte Carlo method by randomly generating points within the rectangle. Different levels of precision for point generation are used to estimate the area:
-- Precision 0.1
-- Precision 0.001
-- Precision 0.000001
+- 0.1
+- 0.001
+- 0.000001
 
 The program also compares the accuracy of the area estimation for varying numbers of points:
 - 10^3 points

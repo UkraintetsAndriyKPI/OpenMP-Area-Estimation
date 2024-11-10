@@ -26,9 +26,9 @@
 
 ## Приклади в зображеннях
 
-[example1.png](./example1.png)
-[example2.png](./example2.png)
-[example3.png](./example3.png)
+![example1.png](./example1.png)
+![example2.png](./example2.png)
+![example3.png](./example3.png)
 
 ## Вимоги до середовища:
 

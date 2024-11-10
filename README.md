@@ -26,9 +26,9 @@ The program takes into account the possibility of intersections between the shap
 
 ## Image examples
 
-[example1.png](./example1.png)
-[example2.png](./example2.png)
-[example3.png](./example3.png)
+![example1.png](./example1.png)
+![example2.png](./example2.png)
+![example3.png](./example3.png)
 
 ## Environment Requirements
 

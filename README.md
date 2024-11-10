@@ -24,6 +24,12 @@ The program takes into account the possibility of intersections between the shap
 - The program can randomly generate various shapes (circle, triangle, etc.) and their parameters (sizes, locations) to be cut from the rectangle.
 - The types of shapes, their parameters, and locations are stored in a file for future use.
 
+## Image examples
+
+[example1.png](./example1.png)
+[example2.png](./example2.png)
+[example3.png](./example3.png)
+
 ## Environment Requirements
 
 - OpenMP library installed for parallel computation.

@@ -3,8 +3,10 @@
 #include <omp.h>
 #include <stdio.h>
 #include <stdlib.h>
-#define MAX_TRIANGLES 2
-#define MAX_CIRCLES 2
+#define MAX_TRIANGLES 3
+#define MAX_CIRCLES 3
+#define MAX_TRIANGLE_SIDE 4
+#define MAX_CIRCLE_R 4
 
 // Point struct
 typedef struct {
@@ -136,11 +138,12 @@ int main(int argc, char** argv) {
     Triangle* triangles = (Triangle*)malloc(trianglesAmount * sizeof(Triangle));
 
     printf("\tAll created figures.\n");
+    printf("Ractangle : width = %.2f, height = %.2f\n", rectangle.width, rectangle.height);
     // Circles generating
     for (int i = 0; i < circlesAmount; i++) {
         circles[i].center.x = ((double)rand() / RAND_MAX) * rectangle.width;
         circles[i].center.y = ((double)rand() / RAND_MAX) * rectangle.height;
-        circles[i].radius = ((double)rand() / RAND_MAX) * (rectangle.width / 5);
+        circles[i].radius = ((double)rand() / RAND_MAX) * MAX_CIRCLE_R;
         printf("Circle %d: center(%.2f, %.2f), radius = %.2f\n",
            i, circles[i].center.x, circles[i].center.y, circles[i].radius);
     }
@@ -149,9 +152,9 @@ int main(int argc, char** argv) {
     for (int i = 0; i < trianglesAmount; i++) {
         triangles[i].center.x = ((double)rand() / RAND_MAX) * rectangle.width;
         triangles[i].center.y = ((double)rand() / RAND_MAX) * rectangle.height;
-        triangles[i].side = ((double)rand() / RAND_MAX) * (rectangle.width / 5);
+        triangles[i].side = ((double)rand() / RAND_MAX) * MAX_TRIANGLE_SIDE;
         triangles[i].angle = ((double)rand() / RAND_MAX) * 360;
-        printf("Triangle %d: center(%.2f, %.2f), side = %.2f, angle = %.2f \u00B0C \n",
+        printf("Triangle %d: center(%.2f, %.2f), side = %.2f, angle = %.2f\u00B0\n",
            i + 1, triangles[i].center.x, triangles[i].center.y,
            triangles[i].side, triangles[i].angle);
     }
